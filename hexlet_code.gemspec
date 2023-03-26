@@ -3,22 +3,22 @@
 require_relative "lib/hexlet_code/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "hexlet_code"
+  spec.name = 'hexlet_code'
   spec.version = HexletCode::VERSION
-  spec.authors = ["Dizx"]
-  spec.email = ["124874501+Werstad@users.noreply.github.com"]
+  spec.authors = ["Westard"]
+  spec.email = ['m_kosti@mail.ru']
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = 'Generator form'
+  spec.description = 'It is generator form'
+  spec.homepage = "https://github.com/Werstad/rails-project-63"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://github.com/Werstad/rails-project-63"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/Werstad/rails-project-63"
+  spec.metadata["changelog_uri"] = "https://github.com/Werstad/rails-project-63"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
