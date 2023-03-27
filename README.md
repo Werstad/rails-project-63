@@ -1,6 +1,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Werstad/rails-project-63/workflows/hexlet-check/badge.svg)](https://github.com/Werstad/rails-project-63/actions)
 
+### CI tests and linter status:
+[![Actions Status](https://github.com/Werstad/rails-project-63/actions/CI/badge.svg)](https://github.com/Werstad/rails-project-63/actions)
+
 # HexletCode
 
 TODO: Delete this and the text below, and describe your gem
