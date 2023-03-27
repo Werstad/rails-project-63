@@ -2,7 +2,7 @@
 
 module HexletCode
   class Tag
-
+    class << self
       def build(tag, params = {})
         attrs = build_attrs(params)
         return "<#{tag}#{attrs}>" if single_tag?(tag)
@@ -24,6 +24,6 @@ module HexletCode
         single_tags = %w[br hr img input link]
         single_tags.include?(tag)
       end
-
+    end
   end
 end
