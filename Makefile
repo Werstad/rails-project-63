@@ -1,5 +1,11 @@
 install:
-	bundle install
+			bundle install
+
+test:
+			rake test
+
+start-rake:
+	    bundle exec rake
 
 lint:
-	bundle exec rubocop .
+			bundle exec rubocop.

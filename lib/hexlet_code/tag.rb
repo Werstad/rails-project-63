@@ -1,24 +1,29 @@
 # frozen_string_literal: true
 
 module HexletCode
+  class Tag
 
-  module Tag
+      def build(tag, params = {})
+        attrs = build_attrs(params)
+        return "<#{tag}#{attrs}>" if single_tag?(tag)
 
-    TAGS = %w[br img input textarea label]
-
-    def self.build(tag, params = {})
-      raise "Tag #{tag} is not supported" unless TAGS.include? tag.downcase
-
-      params_as_string = ''
-      params.each do |attr_name, attr_value|
-        params_as_string += " #{attr_name}=\"#{attr_value}\""
+        text_content = block_given? ? yield : ''
+        "<#{tag}#{attrs}>#{text_content}</#{tag}>"
       end
-      result = "<#{tag}#{params_as_string}>"
-      if block_given?
-        result += yield
-        result += "</#{tag}>"
+
+      private
+
+      def build_attrs(params)
+        return '' if params.empty?
+
+        attrs = params.map { |key, val| "#{key}=\"#{val}\"" }.join(' ')
+        " #{attrs}"
       end
-      result
-    end
+
+      def single_tag?(tag)
+        single_tags = %w[br hr img input link]
+        single_tags.include?(tag)
+      end
+
   end
 end
