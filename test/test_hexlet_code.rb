@@ -23,7 +23,7 @@ class TestHexletCode < Minitest::Test
       f.submit
     end
 
-    assert expected_form, form
+    assert_equal(expected_form, form)
   end
 
   def test_it_returns_complicated_form
@@ -36,7 +36,7 @@ class TestHexletCode < Minitest::Test
       f.submit('Send')
     end
 
-    assert expected_form, form
+    assert_equal(expected_form, form)
   end
 
   def test_raise_if_has_inexistant_field
