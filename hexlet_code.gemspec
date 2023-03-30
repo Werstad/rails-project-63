@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Generator form Hexlet'
   spec.homepage = 'https://github.com/Werstad/rails-project-63'
   spec.license = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('3.1.2')
+  spec.required_ruby_version = Gem::Requirement.new('>= 3.1.2')
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
