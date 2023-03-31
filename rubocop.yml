@@ -1,15 +1,14 @@
 AllCops:
-  Exclude:
-    - "**/vendor/**/*"
-    - "**/*.gemspec"
-    - "spec/**"
+  TargetRubyVersion: 3.1
   NewCops: enable
-  TargetRubyVersion: 2.6
   SuggestExtensions: false
 
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+
+
+Layout/LineLength:
+  Max: 125
+
 Style/Documentation:
-  Enabled: false
-Metrics/MethodLength:
-  Enabled: false
-Style/AsciiComments:
   Enabled: false
