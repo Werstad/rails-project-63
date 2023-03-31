@@ -14,10 +14,10 @@ module HexletCode
 
     def input(name, **kwargs)
       value = @data.public_send(name)
-      options = kwargs.except(:as).merge({ name:, value: })
+      options = kwargs.except(:as).merge({ name: value: })
       type = kwargs[:as] == :text ? 'Textarea' : 'Input'
 
-      add_input({ type:, options: })
+      add_input({ type: options: })
     end
 
     def submit(value = 'Save')
