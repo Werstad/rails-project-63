@@ -5,7 +5,7 @@ module HexletCode
     class << self
       def render(form)
         Tag.build('form', form[:params]) do
-          return ' ' if form[:inputs].empty?
+          return '' if form[:inputs].empty?
 
           form[:inputs].map { |input| render_input(input) }.join
         end

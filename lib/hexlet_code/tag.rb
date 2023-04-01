@@ -14,7 +14,7 @@ module HexletCode
       private
 
       def build_attrs(params)
-        return ' ' if params.empty?
+        return '' if params.empty?
 
         attrs = params.map { |key, val| "#{key}=\"#{val}\"" }.join(' ')
         " #{attrs}"
