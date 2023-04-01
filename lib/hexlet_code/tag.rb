@@ -8,7 +8,7 @@ module HexletCode
         return "<#{tag}#{attrs}>" if single_tag?(tag)
 
         text_content = block_given? ? yield : ''
-        '<#{tag}#{attrs}>#{text_content}</#{tag}>'
+        "<#{tag}#{attrs}>#{text_content}</#{tag}>"
       end
 
       private
@@ -17,7 +17,7 @@ module HexletCode
         return '' if params.empty?
 
         attrs = params.map { |key, val| "#{key}=\"#{val}\"" }.join(' ')
-        ' #{attrs}'
+        " #{attrs}"
       end
 
       def single_tag?(tag)
