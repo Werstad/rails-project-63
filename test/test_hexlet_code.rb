@@ -15,7 +15,7 @@ class TestHexletCode < Minitest::Test
   end
 
   def test_it_returns_simple_form
-    user = Struct::User.new(name: 'Chuck')
+    user = Struct::User.new(name: 'Greg')
     expected_form = load_fixture('form_simple.html').chomp
 
     form = HexletCode.form_for(user) do |f|
@@ -27,7 +27,7 @@ class TestHexletCode < Minitest::Test
   end
 
   def test_it_returns_complicated_form
-    user = Struct::User.new(name: 'Bobby', profession: 'Software engineer', gender: 'male')
+    user = Struct::User.new(name: 'Jon', profession: 'Software engineer', gender: 'male')
     expected_form = load_fixture('form_complicated.html').chomp
 
     form = HexletCode.form_for(user, url: '/users') do |f|
@@ -40,7 +40,7 @@ class TestHexletCode < Minitest::Test
   end
 
   def test_raise_if_has_inexistant_field
-    user = Struct::User.new(name: 'Chuck')
+    user = Struct::User.new(name: 'Greg')
 
     assert_raises NoMethodError do
       HexletCode.form_for(user) do |f|
